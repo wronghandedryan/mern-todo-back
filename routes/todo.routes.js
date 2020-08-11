@@ -5,6 +5,7 @@ var todoRoutes = express.router;
 
 
 module.exports = todoRoutes(
+axios(
 
 todoRoutes.route('/').get(function(req, res) {
     Todo.find(function(err, todo) {
@@ -52,5 +53,5 @@ todoRoutes.route('/update/:id').post(function(req, res) {
     });
 })
 
-);
+));
 
