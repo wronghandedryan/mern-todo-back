@@ -28,6 +28,8 @@ app.use('/todos', todoRoutes);
 
 
 
+app.configure('production', () => { app.use(express.errorHandler())
+})
 
 
 
